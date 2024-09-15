@@ -1,13 +1,15 @@
-variable "kubernetes_version" {
-  default     = "1.30"
-  description = "kubernetes version"
+
+variable "aws_region" {
+  description = "AWS region"
+  default     = "ap-south-1"
 }
 
-variable "vpc_cidr" {
-  default     = "10.0.0.0/16"
-  description = "default CIDR range of the VPC"
+variable "cluster_name" {
+  description = "Name of the EKS Cluster"
+  default     = "karpenter-demo"
 }
-variable "aws_region" {
-  default = "us-east-1"
-  description = "aws region"
+
+variable "node_group_instance_type" {
+  description = "Instance type for the node group"
+  default     = "t3.medium"
 }
