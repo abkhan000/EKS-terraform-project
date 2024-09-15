@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: canary-whoami-deployment
+  name: whoami-canary
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: canary-whoami
+      app: whoami-canary
   template:
     metadata:
       labels:
-        app: canary-whoami
+        app: whoami-canary
     spec:
       containers:
-      - name: whoami
-        image: emilevauge/whoami
-        ports:
-        - containerPort: 80
+        - name: whoami-canary
+          image: emilevauge/whoami
+          ports:
+            - containerPort: 80
