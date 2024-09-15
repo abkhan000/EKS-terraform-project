@@ -38,10 +38,10 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         
- deploy:
+deploy:
     name: Deploy to EKS
     runs-on: ubuntu-latest
     needs: terraform  # This ensures that the 'deploy' job waits for the 'terraform' job to complete
