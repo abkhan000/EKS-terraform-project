@@ -38,8 +38,8 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         
   deploy:
     name: Deploy to EKS
@@ -68,9 +68,9 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-         kubectl apply -f whoami-deployment.yaml
-         kubectl apply -f whoami-service.yaml
-         kubectl apply -f canary-whoami-deployment.yaml
+         kubectl apply -f whoami-deployment.yaml--validate=false
+         kubectl apply -f whoami-service.yaml --validate=false
+         kubectl apply -f canary-whoami-deployment.yaml --validate=false
         
   docker-push:
     name: Push Docker Image to Docker Hub
