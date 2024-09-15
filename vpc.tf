@@ -6,12 +6,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "dnamicro-eks-task-${random_string.suffix.result}"
-}
-
-resource "random_string" "suffix" {
-  length  = 4
-  special = false
+  cluster_name = "dnamicro-eks-task"
 }
 
 module "vpc" {
