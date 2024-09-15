@@ -7,7 +7,7 @@ variable "aws_region" {
 }
 
 variable "cluster_name" {
-  default = "karpenter-demo"
+  default = "demo"
 }
 
 variable "node_group_instance_type" {
