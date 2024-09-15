@@ -6,7 +6,7 @@ variable "aws_region" {
 
 variable "cluster_name" {
   description = "Name of the EKS Cluster"
-  default     = "karpenter-demo"
+  default     = "demo"
 }
 
 variable "node_group_instance_type" {
