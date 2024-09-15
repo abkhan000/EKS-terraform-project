@@ -40,6 +40,7 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        
  deploy:
     name: Deploy to EKS
     runs-on: ubuntu-latest
