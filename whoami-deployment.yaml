@@ -13,7 +13,7 @@ spec:
         app: whoami
     spec:
       containers:
-      - name: whoami
-        image: congtaojiang/whoami-nodejs-express:latest
-        ports:
-        - containerPort: 8080
+        - name: whoami
+          image: congtaojiang/whoami-nodejs-express
+          ports:
+            - containerPort: 8080
