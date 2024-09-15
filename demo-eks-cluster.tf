@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 # Reuse an existing VPC instead of creating a new one
-data "aws_vpc" "existing_vpc" {
+data "aws_vpc" "eks-vpc" {
   filter {
     name   = "tag:Name"
     values = ["your-existing-vpc-name"]  # Replace with your actual VPC name
