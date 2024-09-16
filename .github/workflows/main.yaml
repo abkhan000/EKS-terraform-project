@@ -70,7 +70,7 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-         kubectl apply -f whoami-deployment.yaml--validate=false
+         kubectl apply -f whoami-deployment.yaml --validate=false
          kubectl apply -f whoami-service.yaml --validate=false
          kubectl apply -f canary-whoami-deployment.yaml --validate=false
         
